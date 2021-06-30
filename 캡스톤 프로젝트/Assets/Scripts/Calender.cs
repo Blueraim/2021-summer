@@ -119,20 +119,9 @@ public class Calender : MonoBehaviour
         btn.gameObject.SetActive(true);
     }
 
-    public void BtnActiveFalse()
-    {
-        btn.gameObject.SetActive(false);
-    }
-
     public void StudyChoose()
     {
-        /*if(Study != null)
-        {
-            SceneManager.LoadScene("CorridorScene");
-            
-        }*/
-        SceneManager.LoadScene("CorridorScene");
-
+        day++;
     }
 
     public void Season()
