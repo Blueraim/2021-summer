@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/CorridorScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/test.unity
+    path: Assets/Scenes/Opening.unity
     guid: 9e31251cdac558c4f963c9b137f542c5
+  - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: 6b53e3ba1d23a11459ff0a8b08bde7fc
+  - enabled: 1
+    path: Assets/Scenes/CharacterChoose.unity
+    guid: 83ab1e3ffaa056649b47f99215df7b68
+  - enabled: 1
+    path: Assets/Scenes/StudyCal.unity
+    guid: e54c2bb6b39a31c4db332771f68af067
   m_configObjects: {}
