@@ -424,7 +424,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 110711255}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1821455675}
+        m_TargetAssemblyTypeName: Player, Fungus
+        m_MethodName: SetName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &110711255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,7 +1427,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 869366372}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1821455675}
+        m_TargetAssemblyTypeName: Player, Fungus
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4626125089641044641, guid: d3fe9d3a1b0157f409ab91a9712dacb0, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &869366372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1595,7 +1619,6 @@ GameObject:
   - component: {fileID: 1280815494}
   - component: {fileID: 1280815505}
   - component: {fileID: 1280815499}
-  - component: {fileID: 1280815503}
   - component: {fileID: 1280815493}
   - component: {fileID: 1280815504}
   - component: {fileID: 1280815498}
@@ -1605,6 +1628,7 @@ GameObject:
   - component: {fileID: 1280815496}
   - component: {fileID: 1280815497}
   - component: {fileID: 1280815495}
+  - component: {fileID: 1280815511}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1636,8 +1660,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1280815494}
+  selectedCommands:
+  - {fileID: 1280815496}
   variables: []
   description: 
   stepPause: 0
@@ -1665,7 +1691,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1821455676}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1691,8 +1717,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -185.78021
-    y: 11.335167
-    width: 100
+    y: 10.335167
+    width: 101.2
     height: 40
   tint: {r: 1, g: 0.36695006, b: 0, a: 1}
   useCustomTint: 1
@@ -1703,7 +1729,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 1280815505}
   - {fileID: 1280815504}
-  - {fileID: 1280815503}
+  - {fileID: 1280815511}
   - {fileID: 1280815493}
   - {fileID: 1280815502}
   - {fileID: 1280815501}
@@ -1751,13 +1777,13 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1821455676}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
-  fadeWhenDone: 1
+  fadeWhenDone: 0
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
@@ -1778,7 +1804,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1821455676}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1805,7 +1831,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1821455676}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1850,7 +1876,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1821455676}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1877,7 +1903,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1821455676}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1904,7 +1930,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1821455676}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1915,36 +1941,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1280815503
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280815491}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 6
-  indentLevel: 0
-  display: 1
-  stage: {fileID: 0}
-  character: {fileID: 0}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 0}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 0}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
 --- !u!114 &1280815504
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2057,7 +2053,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -448.7802
     y: 39.835167
-    width: 113
+    width: 114
     height: 40
   tint: {r: 0.7924528, g: 0.13830544, b: 0.13830544, a: 1}
   useCustomTint: 1
@@ -2083,6 +2079,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1280815511
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280815491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dbd65a96fa1e94aa37e5fe9604c282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  txtFile: {fileID: 4900000, guid: 6d16e7ebc96388e4bbfa4c1d96778787, type: 3}
+  flowchart: {fileID: 1280815492}
 --- !u!1 &1688838141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,7 +2369,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1790120255}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1821455675}
+        m_TargetAssemblyTypeName: Player, Fungus
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: -1421372048182783404, guid: 72562feef46cd79448cea38aea0b99f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1790120255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2460,11 +2484,11 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &1818243520
@@ -2505,6 +2529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5063bc13dfd34654eab07843a72981f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputName: {fileID: 50238145}
+  flowchart: {fileID: 1280815492}
 --- !u!114 &1821455676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2518,7 +2544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Character Name
-  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  nameColor: {r: 0.1605731, g: 0.4641044, b: 0.8773585, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
   portraitsFace: 0
@@ -2683,7 +2709,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Ok
 --- !u!222 &1952952394
 CanvasRenderer:
   m_ObjectHideFlags: 0
