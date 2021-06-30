@@ -1165,11 +1165,6 @@ MonoBehaviour:
   DofWeekText: {fileID: 556692332}
   StudyText: {fileID: 297250017}
   Text: {fileID: 751452786}
-  grade: 0
-  semester: 0
-  day: 0
-  DofWeek: 
-  Study: 
 --- !u!1 &1049323707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,7 +1748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2063401173
 RectTransform:
   m_ObjectHideFlags: 0
