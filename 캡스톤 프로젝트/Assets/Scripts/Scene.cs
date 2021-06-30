@@ -22,6 +22,7 @@ public class Scene : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "CorridorScene")
         {
             SceneManager.LoadScene("StudyCal");
+            Calender.day++;
         }
     }
 
