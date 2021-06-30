@@ -13,10 +13,6 @@ public class Scene : MonoBehaviour
         }
         else if(SceneManager.GetActiveScene().name == "Prologue")
         {
-            SceneManager.LoadScene("CharacterChoose");
-        }
-        else if (SceneManager.GetActiveScene().name == "CharacterChoose")
-        {
             SceneManager.LoadScene("StudyCal");
         }
         else if (SceneManager.GetActiveScene().name == "StudyCal")

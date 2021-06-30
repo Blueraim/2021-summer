@@ -17,22 +17,17 @@ public class Calender : MonoBehaviour
     public Text Text;
     private bool canPlus = true;
 
-    public static int grade, semester, day;
-    public static string DofWeek;
+    public static int grade =1, semester=1, day=1;
+    public static string DofWeek = "월";
 
     private string[] DofWeek_ = new string[] { "일", "월", "화", "수", "목", "금", "토" };
 
-    public static string Study;
+    public static string Study="non";
+
 
     // Start is called before the first frame update
     void Start()
     {
-        grade = 1;
-        semester = 1;
-        day = 1;
-        DofWeek = "월";
-        Study = "non";
-
         TextCallFunction();
     }
 
