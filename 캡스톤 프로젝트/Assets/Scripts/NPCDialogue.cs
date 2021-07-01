@@ -7,6 +7,7 @@ public class NPCDialogue : MonoBehaviour
 {
     public Text npcName;
     public Text npcText;
+    public Image textBox;
     public NPC npc;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -15,6 +16,7 @@ public class NPCDialogue : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
+                textBox.gameObject.SetActive(true);
                 npcName.text = npc.GetName();
                 npc.ShowText(npcText);
             }

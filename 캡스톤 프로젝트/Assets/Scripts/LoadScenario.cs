@@ -10,6 +10,9 @@ public class LoadScenario : MonoBehaviour
 
     private string[] sentences;
     private int currentTime;
+    private bool timer;
+    private float time;
+
 
     void Start()
     {
@@ -21,10 +24,10 @@ public class LoadScenario : MonoBehaviour
     {
         active.SetActive(true);
 
-        for (int i=0; i<sentences.Length; i++)
+        for (int i = 0; i < sentences.Length; i++)
         {
             txt.text += sentences[i];
-            txt.text += "\n";
+            txt.text += "\n\n";
         }
     }
 }

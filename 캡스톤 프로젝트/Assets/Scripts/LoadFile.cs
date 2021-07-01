@@ -25,12 +25,6 @@ public class LoadFile : MonoBehaviour
                 tmp.Add(lines[j]);
             }
 
-            /*Debug.Log(key);
-            for(int j = 0; j<tmp.Count; j++)
-            {
-                Debug.Log(tmp[j]);
-            }*/
-
             questionList.Add(key, tmp);
         }
     }
