@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +14,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SwitchOFF(GameObject active)
+    {
+        active.SetActive(false);
+    }
+
+    public void SwitchOn(GameObject active)
+    {
+        active.SetActive(true);
     }
 }
