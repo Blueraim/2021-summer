@@ -1,2 +1,0 @@
-C:\Users\admin\Desktop\20193514\2021-summer\캡스톤 프로젝트\obj\Debug\Fungus.UsfxrEditor.csprojAssemblyReference.cache
-C:\Users\admin\Desktop\20193514\2021-summer\캡스톤 프로젝트\obj\Debug\Fungus.UsfxrEditor.csproj.CoreCompileInputs.cache
