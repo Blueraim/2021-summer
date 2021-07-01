@@ -9,17 +9,14 @@ public class PlayerStat : MonoBehaviour
     public Text ArithmeticText;
     public Text ArtAndPhysicalText;
 
-
     private static int R, I, A, S, E, C;
     public static int sLanguage = 0, sArithmetic = 0, sArtAndPhysical = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         LanguageText.text = "¾ð¾î: " + sLanguage;
