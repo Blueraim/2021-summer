@@ -8,18 +8,15 @@ public class NPCDialogue : MonoBehaviour
     public Text npcName;
     public Text npcText;
     public Image textBox;
-    public NPC npc;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private NPC npc;
+
+    public void GetDialogue(GameObject collisionNPC)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (collision.gameObject.tag == "Player")
-            {
-                textBox.gameObject.SetActive(true);
-                npcName.text = npc.GetName();
-                npc.ShowText(npcText);
-            }
-        }
+        npc = collisionNPC.GetComponent<NPC>();
+
+        textBox.gameObject.SetActive(true);
+        npcName.text = npc.GetName();
+        npc.ShowText(npcText);
     }
 }

@@ -58,7 +58,4 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="3" name="collision">
-  <object id="1" x="75.7233" y="119.372" width="101.516" height="56.8752"/>
- </objectgroup>
 </map>

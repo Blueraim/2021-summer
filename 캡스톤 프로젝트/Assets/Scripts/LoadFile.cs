@@ -15,12 +15,12 @@ public class LoadFile : MonoBehaviour
         string currentText = questionFile.text.Substring(0, questionFile.text.Length - 1);
         string[] lines = currentText.Split('\n');
 
-        for (int i = 0; i < lines.Length; i += 4)
+        for (int i = 0; i < lines.Length; i += 7)
         {
             List<string> tmp = new List<string>();
             char key = lines[i][0];
 
-            for (int j = i + 1; j < i + 4; j++)
+            for (int j = i + 1; j < i + 7; j++)
             {
                 tmp.Add(lines[j]);
             }

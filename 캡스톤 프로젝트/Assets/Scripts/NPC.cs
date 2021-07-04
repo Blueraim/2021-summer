@@ -12,6 +12,7 @@ public class NPC : MonoBehaviour
     private bool Interaction = false;
 
     private string npcName;
+
     private static int questionIndex = 0;
     private static int count = 0;
 
@@ -58,6 +59,7 @@ public class NPC : MonoBehaviour
     }
 
     public string GetName() { return npcName; }
+    public char GetKey() { return questionKey; }
 
     public void ShowText(Text dialogue)
     {

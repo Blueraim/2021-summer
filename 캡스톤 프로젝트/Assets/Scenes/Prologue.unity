@@ -786,7 +786,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: "\uC785\uB825..."
 --- !u!222 &674473212
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1679,6 +1679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13433a05f72f6e04da0e500f2ca5e19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
 --- !u!4 &1821455677
 Transform:
   m_ObjectHideFlags: 0
@@ -1975,3 +1976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611768526eddff949a943517b5ad40a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodButton: {fileID: 0}
+  notbadButton: {fileID: 0}
+  badButton: {fileID: 0}
