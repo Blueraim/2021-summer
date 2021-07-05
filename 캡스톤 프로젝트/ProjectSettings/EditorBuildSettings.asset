@@ -15,8 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/StudyCal.unity
     guid: e54c2bb6b39a31c4db332771f68af067
   - enabled: 1
-    path: Assets/Scenes/CorridorScene.unity
+    path: Assets/Scenes/SpringScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/SummerScene.unity
+    guid: 0df846da1cd5ac248806685e76921718
+  - enabled: 1
+    path: Assets/Scenes/FallScene.unity
+    guid: af24cc5a6bfe8eb4d92a76fb46bff1a2
+  - enabled: 1
+    path: Assets/Scenes/WinterScene.unity
+    guid: 2d8985a407bf82345a3e8ca4b45a1f30
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 28c2584498cb00a4892d0a9539a10ffc

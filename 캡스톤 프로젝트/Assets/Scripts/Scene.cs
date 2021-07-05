@@ -17,9 +17,10 @@ public class Scene : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "StudyCal")
         {
-            SceneManager.LoadScene("CorridorScene");
+            SeasonCheck();
         }
-        else if (SceneManager.GetActiveScene().name == "CorridorScene")
+        else if ((SceneManager.GetActiveScene().name == "SpringScene") || (SceneManager.GetActiveScene().name == "SummerScene") ||
+                 (SceneManager.GetActiveScene().name == "FallScene") || (SceneManager.GetActiveScene().name == "WinterScene"))
         {
             SceneManager.LoadScene("StudyCal");
             Calender.day++;
@@ -27,6 +28,26 @@ public class Scene : MonoBehaviour
         else if(SceneManager.GetActiveScene().name == "Ending")
         {
             SceneManager.LoadScene("Opening");
+        }
+    }
+
+    void SeasonCheck()
+    {
+        if ((Calender.day < 14) && (Calender.semester == 1))
+        {
+            SceneManager.LoadScene("SpringScene");
+        }
+        else if (Calender.semester == 1)
+        {
+            SceneManager.LoadScene("SummerScene");
+        }
+        if ((Calender.day < 14) && (Calender.semester == 2))
+        {
+            SceneManager.LoadScene("FallScene");
+        }
+        else if (Calender.semester == 2)
+        {
+            SceneManager.LoadScene("WinterScene");
         }
     }
 
