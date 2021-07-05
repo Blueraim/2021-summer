@@ -24,6 +24,10 @@ public class Scene : MonoBehaviour
             SceneManager.LoadScene("StudyCal");
             Calender.day++;
         }
+        else if(SceneManager.GetActiveScene().name == "Ending")
+        {
+            SceneManager.LoadScene("Opening");
+        }
     }
 
     // Start is called before the first frame update

@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NPC
+  - WrapZone
   layers:
   - Default
   - TransparentFX
@@ -44,8 +46,14 @@ TagManager:
   - name: Map
     uniqueID: 1656561369
     locked: 0
+  - name: LowerBody
+    uniqueID: 673542021
+    locked: 0
   - name: Character
     uniqueID: 3191819419
+    locked: 0
+  - name: UpperBody
+    uniqueID: 3039956465
     locked: 0
   - name: MapFront
     uniqueID: 3020247343

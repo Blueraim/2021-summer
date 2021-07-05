@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class Calender : MonoBehaviour
 {
-
     public Text gradeText;
     public Text semesterText;
     public Text dayText;
@@ -22,7 +21,7 @@ public class Calender : MonoBehaviour
 
     private bool canPlus = true;
 
-    public static int grade = 1, semester = 1, day = 1;
+    public static int grade = 3, semester = 2, day = 1;
 
     private string[] DofWeek_ = new string[] { "일", "월", "화", "수", "목", "금", "토" };
 
@@ -138,7 +137,7 @@ public class Calender : MonoBehaviour
         }
         if(grade > 3)
         {
-            SceneManager.LoadScene("Opening");
+            SceneManager.LoadScene("Ending");
         }
     }
 }
