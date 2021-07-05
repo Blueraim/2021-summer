@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - NPC
+  - WrapZone
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - NoPassing
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Map
+    uniqueID: 1656561369
+    locked: 0
+  - name: LowerBody
+    uniqueID: 673542021
+    locked: 0
+  - name: Character
+    uniqueID: 3191819419
+    locked: 0
+  - name: UpperBody
+    uniqueID: 3039956465
+    locked: 0
+  - name: MapFront
+    uniqueID: 3020247343
+    locked: 0
