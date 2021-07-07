@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Calender.cs" />
     <Compile Include="Assets\Scripts\NPCDialogue.cs" />
     <Compile Include="Assets\Scripts\EndingText.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <None Include="Assets\Resource\question.txt" />
     <None Include="Assets\Resource\scenario.txt" />
     <Reference Include="UnityEngine">

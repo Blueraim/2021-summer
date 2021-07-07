@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public GameManager gameManager;
+    public Camera Camera;
 
     private NPCDialogue npcDialogue;
 
@@ -46,12 +47,18 @@ public class Player : MonoBehaviour
         if(isTigger && Input.GetKeyDown(KeyCode.F) && !outSide)
         {
             transform.Translate(0, -3000, 0);
+
             outSide = true;
+
+            Camera.orthographicSize = 1000;
         }
         else if(isTigger && Input.GetKeyDown(KeyCode.F) && outSide)
         {
             transform.Translate(0, +3000, 0);
+
             outSide = false;
+
+            Camera.orthographicSize = 800;
         }
     }
 
