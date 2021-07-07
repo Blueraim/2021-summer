@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private GameObject scanObject;
 
     private bool isTigger = false;
+    private bool outSide = false;
 
     void Start()
     {
@@ -42,9 +43,15 @@ public class Player : MonoBehaviour
             scanObject = null;
         }
 
-        if(isTigger && Input.GetKeyDown(KeyCode.F))
+        if(isTigger && Input.GetKeyDown(KeyCode.F) && !outSide)
         {
-            transform.Translate(-3, -3100, 0);
+            transform.Translate(0, -3000, 0);
+            outSide = true;
+        }
+        else if(isTigger && Input.GetKeyDown(KeyCode.F) && outSide)
+        {
+            transform.Translate(0, +3000, 0);
+            outSide = false;
         }
     }
 

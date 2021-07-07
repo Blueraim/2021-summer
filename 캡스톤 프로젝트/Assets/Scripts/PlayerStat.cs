@@ -19,22 +19,22 @@ public class PlayerStat : MonoBehaviour
 
     void Update()
     {
-        LanguageText.text = "언어: " + sLanguage;
-        ArithmeticText.text = "산수: " + sArithmetic;
+        LanguageText.text = "인문사회: " + sLanguage;
+        ArithmeticText.text = "이공: " + sArithmetic;
         ArtAndPhysicalText.text = "예체능: " + sArtAndPhysical;
     }
 
     public static void Study()
     {
-        if (Calender.Study == "Language")
+        if (Calender.Study == "인문사회")
         {
             sLanguage++;
         }
-        else if (Calender.Study == "Arithmetic")
+        else if (Calender.Study == "이공")
         {
             sArithmetic++;
         }
-        else if(Calender.Study == "ArtAndPhysical")
+        else if(Calender.Study == "예체능")
             sArtAndPhysical++;
     }
 }

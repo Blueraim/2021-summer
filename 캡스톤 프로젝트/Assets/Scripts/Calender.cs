@@ -53,9 +53,9 @@ public class Calender : MonoBehaviour
 
     void TextCallFunction()
     {
-        gradeText.text = "학년: " + grade;
-        semesterText.text = "학기: " + semester;
-        dayText.text = "날짜: " + day;
+        gradeText.text = grade + "학년";
+        semesterText.text = semester + "학기";
+        dayText.text = day + "일";
         DofWeekText.text = DofWeek_[day % 7] + "요일";
         StudyText.text = "공부할 것: " + Study;
     }
@@ -79,15 +79,15 @@ public class Calender : MonoBehaviour
 
         if (ButtonName == "Language")
         {
-            Study = "Language";
+            Study = "인문사회";
         }
         else if (ButtonName == "Arithmetic")
         {
-            Study = "Arithmetic";
+            Study = "이공";
         }
         else if (ButtonName == "ArtAndPhysical")
         {
-            Study = "ArtAndPhysical";
+            Study = "예체능";
         }
 
         StudyText.text = "공부할 것: " + Study;
@@ -97,7 +97,7 @@ public class Calender : MonoBehaviour
     {
         if (day%7 == 5)
         {
-            Text.text = "오늘은 금요일이다.\n친구들을 찾아가 대화를 나눠보자!";
+            Text.text = "오늘은 금요일이다.\n\n친구들을 찾아가\n대화를 나눠보자!";
 
             BtnActivetrue();
         }
