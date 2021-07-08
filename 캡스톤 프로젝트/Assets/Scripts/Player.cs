@@ -6,45 +6,42 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public GameManager gameManager;
     public Camera Camera;
 
     private NPCDialogue npcDialogue;
 
     private static string playerName;
-    private static Sprite playerSprite;
-    private static Animator animator;
-    private static RuntimeAnimatorController animation;
     private GameObject scanObject;
+    private GameManager gameManager;
 
     private bool isTigger = false;
     private bool outSide = false;
 
     void Start()
     {
-        /*if(SceneManager.GetActiveScene().name == "Prologue")
+        if (SceneManager.GetActiveScene().name.Contains("Scene"))
         {
-            
+            GameObject manager = GameObject.Find("Main Camera");
+            gameManager = manager.GetComponentInChildren<GameManager>();
         }
-        else if(SceneManager.GetActiveScene().name == "CorridorScene")
-        {
-            InputAnimator();
-        }*/
     }
 
     void Update()
     {
-        if(scanObject != null && Input.GetKeyDown(KeyCode.Space))
+        if (scanObject != null && Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log(scanObject.name);
-            npcDialogue = scanObject.GetComponent<NPCDialogue>();
+            NPC collision = scanObject.GetComponent<NPC>();
 
-            npcDialogue.GetDialogue(scanObject);
-            gameManager.GetNPC(scanObject);
-            scanObject = null;
+            if (collision.InteractionCheck())
+            {
+                Debug.Log(scanObject.name);
+                npcDialogue = scanObject.GetComponent<NPCDialogue>();
+                npcDialogue.GetDialogue(collision);
+                gameManager.GetNPC(collision);
+            }
         }
 
-        if(isTigger && Input.GetKeyDown(KeyCode.F) && !outSide)
+        if (isTigger && Input.GetKeyDown(KeyCode.F) && !outSide)
         {
             transform.Translate(0, -3000, 0);
 
@@ -52,7 +49,7 @@ public class Player : MonoBehaviour
 
             Camera.orthographicSize = 1000;
         }
-        else if(isTigger && Input.GetKeyDown(KeyCode.F) && outSide)
+        else if (isTigger && Input.GetKeyDown(KeyCode.F) && outSide)
         {
             transform.Translate(0, +3000, 0);
 
@@ -69,23 +66,6 @@ public class Player : MonoBehaviour
 
     public string GetName() { return playerName; }
 
-    public void SetAnimator(Sprite sprite)
-    {
-        if(sprite.name == "Player_girl_0")
-        {
-            
-        }
-        else
-        {
-            animation = Resources.Load("Animation/Player_boy/Boy") as RuntimeAnimatorController;
-        }
-    }
-
-    public void InputAnimator()
-    {
-        animator = GetComponent<Animator>();
-        animator.runtimeAnimatorController = animation;
-    }
 
     private void OnCollisionStay2D(Collision2D collision)
     {

@@ -10,15 +10,15 @@ public class GameManager : MonoBehaviour
     public Button notbadButton;
     public Button badButton;
 
-    private NPC npc;
+    private static NPC npc;
     private EndingText ending;
 
     private static Dictionary<char, int> result;
+    private bool check = true;
 
-    // Start is called before the first frame update
     void Start()
     {
-        if(result == null)
+        if (result == null)
         {
             result = new Dictionary<char, int>();
 
@@ -29,28 +29,22 @@ public class GameManager : MonoBehaviour
             result.Add('A', 0);
             result.Add('I', 0);
         }
+    }
 
-        if(SceneManager.GetActiveScene().name == "Ending")
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Ending" && check)
         {
-            ending = gameObject.GetComponent<EndingText>();
+            ending = GameObject.Find("Main Camera").gameObject.GetComponent<EndingText>();
+            ending.SetDictionary(result);
+            check = false;
+            Debug.Log("엔딩씬 완료");
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GetNPC(NPC collisionNPC)
     {
-        
-    }
-
-    public void CalValue()
-    {
-        ending.SortResult(result);
-        ending.ShowResult();
-    }
-
-    public void GetNPC(GameObject collisionNPC)
-    {
-        npc = collisionNPC.GetComponent<NPC>();
+        npc = collisionNPC;
     }
 
     public void ButtonClick(Button button)
@@ -71,7 +65,13 @@ public class GameManager : MonoBehaviour
 
     void IncreaseValue(int value)
     {
-        if(result.ContainsKey(npc.GetKey()))
+        Debug.Log(npc.name);
+
+        if (result.Count == 0)
+        {
+            Debug.Log("리스트가 없습니다.");
+        }
+        else if (result.ContainsKey(npc.GetKey()))
         {
             result[npc.GetKey()] += value;
         }

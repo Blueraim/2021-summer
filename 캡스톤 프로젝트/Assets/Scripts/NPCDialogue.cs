@@ -9,14 +9,17 @@ public class NPCDialogue : MonoBehaviour
     public Text npcText;
     public Image textBox;
 
-    private NPC npc;
+    private static NPC npc;
 
-    public void GetDialogue(GameObject collisionNPC)
+    public void GetDialogue(NPC collsionNPC)
     {
-        npc = collisionNPC.GetComponent<NPC>();
+        npc = collsionNPC;
 
-        textBox.gameObject.SetActive(true);
-        npcName.text = npc.GetName();
-        npc.ShowText(npcText);
+        if (!npc.GetInteraction())
+        {
+            textBox.gameObject.SetActive(true);
+            npcName.text = npc.GetName();
+            npc.ShowQuestion(npcText);
+        }
     }
 }
