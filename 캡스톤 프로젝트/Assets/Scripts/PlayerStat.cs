@@ -12,6 +12,8 @@ public class PlayerStat : MonoBehaviour
     private static int R, I, A, S, E, C;
     public static int sLanguage = 0, sArithmetic = 0, sArtAndPhysical = 0;
 
+    private static string Language = "하", Arithmetic = "하", ArtAndPhysical = "하";
+
     void Start()
     {
 
@@ -19,9 +21,11 @@ public class PlayerStat : MonoBehaviour
 
     void Update()
     {
-        LanguageText.text = "인문사회: " + sLanguage;
-        ArithmeticText.text = "이공: " + sArithmetic;
-        ArtAndPhysicalText.text = "예체능: " + sArtAndPhysical;
+        StudyCal();
+
+        LanguageText.text = "인문사회: " + Language;
+        ArithmeticText.text = "이공: " + Arithmetic;
+        ArtAndPhysicalText.text = "예체능: " + ArtAndPhysical;
     }
 
     public static void Study()
@@ -36,5 +40,35 @@ public class PlayerStat : MonoBehaviour
         }
         else if(Calender.Study == "예체능")
             sArtAndPhysical++;
+    }
+
+    void StudyCal()
+    {
+        if(sLanguage > 70)
+        {
+            Language = "상";
+        }
+        else if(sLanguage > 30)
+        {
+            Language = "중";
+        }
+
+        if (sArithmetic > 70)
+        {
+            Arithmetic = "상";
+        }
+        else if (sArithmetic > 30)
+        {
+            Arithmetic = "중";
+        }
+
+        if (sArtAndPhysical > 70)
+        {
+            ArtAndPhysical = "상";
+        }
+        else if (sArtAndPhysical > 30)
+        {
+            ArtAndPhysical = "중";
+        }
     }
 }
