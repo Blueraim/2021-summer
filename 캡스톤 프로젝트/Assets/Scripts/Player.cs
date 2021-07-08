@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 
     private bool isTigger = false;
     private bool outSide = false;
+    private bool check = false;
 
     void Start()
     {
@@ -31,13 +32,22 @@ public class Player : MonoBehaviour
         if (scanObject != null && Input.GetKeyDown(KeyCode.Space))
         {
             NPC collision = scanObject.GetComponent<NPC>();
+            npcDialogue = scanObject.GetComponent<NPCDialogue>();
 
-            if (collision.InteractionCheck())
+            collision.InteractionChange();
+
+            if (collision.GetInteraction() && check)
             {
-                Debug.Log(scanObject.name);
-                npcDialogue = scanObject.GetComponent<NPCDialogue>();
+                check = false;
+                npcDialogue.TextBoxOff();
+            }
+            else
+            {
+                if (collision.GetInteraction())
+                    check = true;
+
                 npcDialogue.GetDialogue(collision);
-                gameManager.GetNPC(collision);
+                gameManager.SetNPC(collision);
             }
         }
 

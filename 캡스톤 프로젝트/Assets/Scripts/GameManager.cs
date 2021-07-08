@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
     public Button goodButton;
     public Button notbadButton;
     public Button badButton;
+    public Text missionText;
 
     private static NPC npc;
     private EndingText ending;
 
     private static Dictionary<char, int> result;
     private bool check = true;
+    private static string[] npcsName;
 
     void Start()
     {
@@ -29,6 +31,11 @@ public class GameManager : MonoBehaviour
             result.Add('A', 0);
             result.Add('I', 0);
         }
+
+        if(SceneManager.GetActiveScene().name.Contains("Scene"))
+        {
+            missionText.text = NPC.GetKeyName() + "에게 말을 걸어보자!" ;
+        }
     }
 
     void Update()
@@ -42,7 +49,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GetNPC(NPC collisionNPC)
+    public void SetNPC(NPC collisionNPC)
     {
         npc = collisionNPC;
     }

@@ -15,11 +15,14 @@ public class NPCDialogue : MonoBehaviour
     {
         npc = collsionNPC;
 
-        if (!npc.GetInteraction())
-        {
-            textBox.gameObject.SetActive(true);
-            npcName.text = npc.GetName();
-            npc.ShowQuestion(npcText);
-        }
+        textBox.gameObject.SetActive(true);
+        npcName.text = npc.GetName();
+        Debug.Log("이름 불러오기");
+        npc.ShowQuestion(npcText);
+    }
+
+    public void TextBoxOff()
+    {
+        textBox.gameObject.SetActive(false);
     }
 }

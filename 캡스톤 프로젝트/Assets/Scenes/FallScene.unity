@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 156, y: -20}
+  m_AnchoredPosition: {x: 160, y: -20}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &72398242
@@ -1576,7 +1576,6 @@ MonoBehaviour:
   goodButton: {fileID: 311287954}
   notbadButton: {fileID: 1185005791}
   badButton: {fileID: 1990418169}
-  keyOrder: 520043004500530041004900
 --- !u!114 &899747617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1605,7 +1604,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2661715, y: -1.3855529}
+  m_Offset: {x: 1.2704225, y: -1.3260386}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1616,8 +1615,87 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9565865, y: 0.6310015}
+  m_Size: {x: 1.1946436, y: 0.75003004}
   m_EdgeRadius: 0
+--- !u!1 &922791639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 922791640}
+  - component: {fileID: 922791642}
+  - component: {fileID: 922791641}
+  m_Layer: 5
+  m_Name: WhosText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &922791640
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922791639}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1909213617}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 400, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &922791641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922791639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7a9fceb9e8920024e930dbd7e55566dd, type: 3}
+    m_FontSize: 28
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 70
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\uD55C\uC131\uD638\uD55C\uD14C \uB9D0\uC744 \uAC78\uC5B4\uBCF4\uC790!"
+--- !u!222 &922791642
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922791639}
+  m_CullTransparentMesh: 1
 --- !u!1 &1000790477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,6 +2420,7 @@ RectTransform:
   - {fileID: 1170094609}
   - {fileID: 1489497925}
   - {fileID: 331215689}
+  - {fileID: 1909213617}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2616,7 +2695,6 @@ MonoBehaviour:
   goodButton: {fileID: 311287954}
   notbadButton: {fileID: 1185005791}
   badButton: {fileID: 1990418169}
-  keyOrder: 520043004500530041004900
 --- !u!114 &1417468562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2645,7 +2723,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2803317, y: -1.5230488}
+  m_Offset: {x: 1.26927, y: -1.4257026}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2656,7 +2734,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9878628, y: 0.5752461}
+  m_Size: {x: 1.125033, y: 0.76993847}
   m_EdgeRadius: 0
 --- !u!1 &1429732995
 GameObject:
@@ -2917,7 +2995,6 @@ MonoBehaviour:
   goodButton: {fileID: 311287954}
   notbadButton: {fileID: 1185005791}
   badButton: {fileID: 1990418169}
-  keyOrder: 520043004500530041004900
 --- !u!114 &1461751672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2946,7 +3023,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.1753144, y: -1.5203607}
+  m_Offset: {x: 1.1416106, y: -1.416428}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2957,7 +3034,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7915344, y: 0.56150305}
+  m_Size: {x: 0.9769074, y: 0.7693684}
   m_EdgeRadius: 0
 --- !u!1 &1489497922
 GameObject:
@@ -3286,7 +3363,6 @@ MonoBehaviour:
   goodButton: {fileID: 311287954}
   notbadButton: {fileID: 1185005791}
   badButton: {fileID: 1990418169}
-  keyOrder: 520043004500530041004900
 --- !u!114 &1685477324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3315,7 +3391,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2004511, y: -1.509092}
+  m_Offset: {x: 1.1187999, y: -1.4489276}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3326,7 +3402,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9124551, y: 0.6372702}
+  m_Size: {x: 1.0757576, y: 0.7575989}
   m_EdgeRadius: 0
 --- !u!1 &1740466465
 GameObject:
@@ -3591,7 +3667,6 @@ MonoBehaviour:
   goodButton: {fileID: 311287954}
   notbadButton: {fileID: 1185005791}
   badButton: {fileID: 1990418169}
-  keyOrder: 520043004500530041004900
 --- !u!114 &1795106645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3620,7 +3695,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2825748, y: -1.520615}
+  m_Offset: {x: 1.2825748, y: -1.4207906}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3631,7 +3706,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0213177, y: 0.559448}
+  m_Size: {x: 1.0213177, y: 0.75909686}
   m_EdgeRadius: 0
 --- !u!1 &1837588246
 GameObject:
@@ -3734,6 +3809,7 @@ MonoBehaviour:
   goodButton: {fileID: 311287954}
   notbadButton: {fileID: 1185005791}
   badButton: {fileID: 1990418169}
+  missionText: {fileID: 922791641}
 --- !u!114 &1837588252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3818,6 +3894,82 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1909213616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909213617}
+  - component: {fileID: 1909213619}
+  - component: {fileID: 1909213618}
+  m_Layer: 5
+  m_Name: TextBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1909213617
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909213616}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 922791640}
+  m_Father: {fileID: 1267674827}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -65}
+  m_SizeDelta: {x: 421.4385, y: 84.2878}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1909213618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909213616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 685dfadb24b862d42b7c674dfeb032a0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1909213619
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909213616}
+  m_CullTransparentMesh: 1
 --- !u!1 &1931279961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4024,7 +4176,6 @@ MonoBehaviour:
   goodButton: {fileID: 311287954}
   notbadButton: {fileID: 1185005791}
   badButton: {fileID: 1990418169}
-  keyOrder: 520043004500530041004900
 --- !u!114 &1957336813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4053,7 +4204,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.3046038, y: -1.4866414}
+  m_Offset: {x: 1.304604, y: -1.4094387}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4064,7 +4215,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.93932146, y: 0.62378836}
+  m_Size: {x: 1.1510769, y: 0.7781937}
   m_EdgeRadius: 0
 --- !u!1 &1968339130
 GameObject:

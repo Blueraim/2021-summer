@@ -6,6 +6,7 @@ using System.Linq;
 
 public class EndingText : MonoBehaviour
 {
+    public Text StatText;
     public Text firstResult;
     public Text secondResult;
     public Player player;
@@ -15,7 +16,7 @@ public class EndingText : MonoBehaviour
     private List<string> typeName;
 
     private static Dictionary<char, List<string>> job;
-    private string highStat;
+    private string highStat = "sLanguage";
     private Dictionary<char, int> calValue;
 
     void Awake()
@@ -82,7 +83,6 @@ public class EndingText : MonoBehaviour
         tmp.Add("sArtAndPhysical", PlayerStat.sArtAndPhysical);
 
         highStat = tmp.OrderByDescending(i => i.Value).FirstOrDefault().Key;
-        Debug.Log(highStat);
 
         ShowResult();
     }
@@ -92,10 +92,12 @@ public class EndingText : MonoBehaviour
         List<string> first = new List<string>(GetJob(key[0]));
         List<string> second = new List<string>(GetJob(key[1]));
 
+        StatText.text = "가장 높은 점수의 계열은 " + GetStatName() + "계열입니다.";
+
         firstResult.text = player.GetName() + "님의 첫번 째 유형은 " +
-            typeName[0] + "(" + key[0] + ") 입니다.\n";
+            typeName[0] + "(" + key[0] + ") 입니다. 관련 직업에는\n";
         secondResult.text = player.GetName() + "님의 두번 째 유형은 " +
-            typeName[1] + "(" + key[1] + ") 입니다.\n";
+            typeName[1] + "(" + key[1] + ") 입니다. 관련 직업에는\n";
 
         /*
         for (int i = 0; i < first.Count; i++)
@@ -113,7 +115,6 @@ public class EndingText : MonoBehaviour
         int count = 0;
         for (int i = 0; i < showList.Count; i++)
         {
-            Debug.Log("보여주기");
             if (count == 4)
             {
                 showText.text += "\n";
@@ -122,6 +123,7 @@ public class EndingText : MonoBehaviour
             else if (i == showList.Count - 1)
             {
                 showText.text += (showList[i]);
+                showText.text += "가 있습니다.";
                 count++;
             }
             else
@@ -134,9 +136,7 @@ public class EndingText : MonoBehaviour
 
     List<string> GetJob(char key)
     {
-        Debug.Log("GetJob 호출됨");
         List<string> jobList = new List<string>(job[key]);
-        Debug.Log("키에 맞는 리스트 나옴");
         List<string> showText = new List<string>();
         bool check = false;
 
@@ -190,13 +190,17 @@ public class EndingText : MonoBehaviour
         return null;
     }
 
-    public void SwitchOFF(GameObject active)
+    string GetStatName()
     {
-        active.SetActive(false);
-    }
-
-    public void SwitchOn(GameObject active)
-    {
-        active.SetActive(true);
+        switch (highStat)
+        {
+            case "sLanguage":
+                return "\'인문사회\'";
+            case "sArithmetic":
+                return "\'이공\'";
+            case "sArtAndPhysical":
+                return "\'예체능\'";
+        }
+        return null;
     }
 }

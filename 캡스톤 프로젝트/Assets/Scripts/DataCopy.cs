@@ -10,7 +10,6 @@ public class DataCopy : MonoBehaviour
         if (goList.Length == 1)
         {
             DontDestroyOnLoad(this);
-            //Debug.LogError("데이터 이동");
         }
     }
 }
