@@ -21,7 +21,7 @@ public class Calender : MonoBehaviour
 
     private bool canPlus = true;
 
-    public static int grade = 3, semester = 1, day = 1;
+    public static int grade = 1, semester = 1, day = 1;
 
     private string[] DofWeek_ = new string[] { "일", "월", "화", "수", "목", "금", "토" };
 
@@ -62,7 +62,7 @@ public class Calender : MonoBehaviour
 
     IEnumerator AutoDayPlus()
     {
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(0.5f);
 
         if ((day % 7 != 5) && (day % 7 != 0))
         {
@@ -138,6 +138,16 @@ public class Calender : MonoBehaviour
         if(grade > 3)
         {
             SceneManager.LoadScene("Ending");
+        }
+    }
+
+    public void npcUp()
+    {
+        NPC.order++;
+
+        if (NPC.order == 6)
+        {
+            NPC.order = 0;
         }
     }
 }

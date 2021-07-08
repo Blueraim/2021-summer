@@ -255,7 +255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &204247038
 RectTransform:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &358239340
 RectTransform:
   m_ObjectHideFlags: 0
@@ -463,8 +463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 300}
-  m_SizeDelta: {x: 200, y: 100}
+  m_AnchoredPosition: {x: 0, y: 230}
+  m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &358239341
 MonoBehaviour:
@@ -529,6 +529,54 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 358239341}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOFF
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1997012080}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOFF
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1769992153}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOFF
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 358239339}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 204247037}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -723,7 +771,6 @@ RectTransform:
   m_Children:
   - {fileID: 1642597049}
   - {fileID: 1327179885}
-  - {fileID: 1618296707}
   m_Father: {fileID: 818037137}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -757,7 +804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621382184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 241, y: -3178, z: 203.27856}
+  m_LocalPosition: {x: 241, y: -3167, z: 203.27856}
   m_LocalScale: {x: 11390, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 1303330524}
@@ -1205,6 +1252,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e6a8f6deb9cdc44a32673aeb1b061d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodText: {fileID: 1099568030}
+  notbadText: {fileID: 1479313587}
+  badText: {fileID: 1689991329}
+  goodButton: {fileID: 1997012082}
+  notbadButton: {fileID: 1769992155}
+  badButton: {fileID: 358239341}
+  keyOrder: 520043004500530041004900
 --- !u!61 &745223591
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1333,7 +1387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13433a05f72f6e04da0e500f2ca5e19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 1120824360}
   Camera: {fileID: 1120824358}
 --- !u!50 &771374622
 Rigidbody2D:
@@ -1627,6 +1680,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e6a8f6deb9cdc44a32673aeb1b061d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodText: {fileID: 1099568030}
+  notbadText: {fileID: 1479313587}
+  badText: {fileID: 1689991329}
+  goodButton: {fileID: 1997012082}
+  notbadButton: {fileID: 1769992155}
+  badButton: {fileID: 358239341}
+  keyOrder: 520043004500530041004900
 --- !u!61 &812320311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1685,6 +1745,7 @@ RectTransform:
   m_Children:
   - {fileID: 204247038}
   - {fileID: 529560639}
+  - {fileID: 1618296707}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1912,6 +1973,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e6a8f6deb9cdc44a32673aeb1b061d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodText: {fileID: 1099568030}
+  notbadText: {fileID: 1479313587}
+  badText: {fileID: 1689991329}
+  goodButton: {fileID: 1997012082}
+  notbadButton: {fileID: 1769992155}
+  badButton: {fileID: 358239341}
+  keyOrder: 520043004500530041004900
 --- !u!61 &965149544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2267,7 +2335,6 @@ GameObject:
   - component: {fileID: 1120824357}
   - component: {fileID: 1120824363}
   - component: {fileID: 1120824362}
-  - component: {fileID: 1120824361}
   - component: {fileID: 1120824360}
   m_Layer: 0
   m_Name: Main Camera
@@ -2356,19 +2423,6 @@ MonoBehaviour:
   goodButton: {fileID: 1997012082}
   notbadButton: {fileID: 1769992155}
   badButton: {fileID: 358239341}
---- !u!114 &1120824361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120824356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e3b5a2584bbec40809b9973e655ea1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questionFile: {fileID: 4900000, guid: 3cf7fb76e58cb9f48a16b85122eb6025, type: 3}
 --- !u!114 &1120824362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3206,6 +3260,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e6a8f6deb9cdc44a32673aeb1b061d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodText: {fileID: 1099568030}
+  notbadText: {fileID: 1479313587}
+  badText: {fileID: 1689991329}
+  goodButton: {fileID: 1997012082}
+  notbadButton: {fileID: 1769992155}
+  badButton: {fileID: 358239341}
+  keyOrder: 520043004500530041004900
 --- !u!61 &1578114779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3255,19 +3316,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618296706}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1997012081}
   - {fileID: 1769992154}
   - {fileID: 358239340}
-  m_Father: {fileID: 529560639}
+  m_Father: {fileID: 818037137}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -328}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1642597048
@@ -3560,7 +3621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1769992154
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3578,8 +3639,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 300}
-  m_SizeDelta: {x: 200, y: 100}
+  m_AnchoredPosition: {x: 0, y: 340}
+  m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1769992155
 MonoBehaviour:
@@ -3644,6 +3705,54 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1769992155}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOFF
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1997012080}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOFF
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1769992153}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOFF
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 358239339}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 204247037}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3853,6 +3962,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e6a8f6deb9cdc44a32673aeb1b061d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodText: {fileID: 1099568030}
+  notbadText: {fileID: 1479313587}
+  badText: {fileID: 1689991329}
+  goodButton: {fileID: 1997012082}
+  notbadButton: {fileID: 1769992155}
+  badButton: {fileID: 358239341}
+  keyOrder: 520043004500530041004900
 --- !u!61 &1796135528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4081,6 +4197,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e6a8f6deb9cdc44a32673aeb1b061d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodText: {fileID: 1099568030}
+  notbadText: {fileID: 1479313587}
+  badText: {fileID: 1689991329}
+  goodButton: {fileID: 1997012082}
+  notbadButton: {fileID: 1769992155}
+  badButton: {fileID: 358239341}
+  keyOrder: 520043004500530041004900
 --- !u!61 &1982986423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4125,7 +4248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1997012081
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4143,8 +4266,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 300}
-  m_SizeDelta: {x: 200, y: 100}
+  m_AnchoredPosition: {x: 0, y: 450}
+  m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997012082
 MonoBehaviour:
@@ -4209,6 +4332,54 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1997012082}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOFF
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1997012080}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOFF
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1769992153}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOFF
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 358239339}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1120824360}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchOn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 204247037}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
