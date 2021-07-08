@@ -13,12 +13,13 @@ public class NPC : MonoBehaviour
     public Button notbadButton;
     public Button badButton;
 
-    public char[] keyOrder = { 'R', 'C', 'E', 'S', 'A', 'I' };
+    public static char[] keyOrder = { 'R', 'C', 'E', 'S', 'A', 'I' };
     public static int order = -1;
 
     private char questionKey;
     private List<string> question;
     private List<string> answer;
+    private static List<string> say;
     private LoadFile load;
     private bool Interaction = false;
     private string npcName;
@@ -60,22 +61,16 @@ public class NPC : MonoBehaviour
 
         question = new List<string>();
         answer = new List<string>();
+        say = new List<string>();
 
         // Debug.Log(questionKey);
         question = load.GetQuestionList(questionKey);
         answer = load.GetAnswerList(questionKey);
+        say = load.GetSayList();
 
         if (question == null)
         {
             Debug.LogError("질문이 없습니다.");
-        }
-    }
-
-    void Update()
-    {
-        if (!SceneManager.GetActiveScene().name.Contains("Scene"))
-        {
-            Interaction = false;
         }
     }
 
@@ -84,22 +79,20 @@ public class NPC : MonoBehaviour
     public bool GetInteraction() { return Interaction; }
     public int GetQuestionIndex() { return questionIndex[order]; }
 
-    public bool InteractionCheck()
+    public void InteractionChange()
     {
-        Debug.Log(order);
         if (keyOrder[order] != questionKey)
         {
             Interaction = true;
-            return false;
         }
-        return true;
     }
 
     public void ShowQuestion(Text dialogue)
     {
         if (Interaction == true)
         {
-            // dialogue.text = "하루에 한 번만 대화할 수 있어!";
+            int rand = Random.Range(0, say.Count);
+            dialogue.text = say[rand];
         }
         else
         {
@@ -136,5 +129,25 @@ public class NPC : MonoBehaviour
         goodButton.gameObject.SetActive(true);
         notbadButton.gameObject.SetActive(true);
         badButton.gameObject.SetActive(true);
+    }
+
+    public static string GetKeyName()
+    {
+        switch (keyOrder[order])
+        {
+            case 'R':
+                return "한성호";
+            case 'C':
+                return "서지민";
+            case 'E':
+                return "한예은";
+            case 'S':
+                return "최다희";
+            case 'A':
+                return "박시은";
+            case 'I':
+                return "박정우";
+        }
+        return null;
     }
 }

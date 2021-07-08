@@ -14,18 +14,13 @@ public class PlayerStat : MonoBehaviour
 
     private static string Language = "하", Arithmetic = "하", ArtAndPhysical = "하";
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         StudyCal();
 
-        LanguageText.text = "인문사회: " + Language;
-        ArithmeticText.text = "이공: " + Arithmetic;
-        ArtAndPhysicalText.text = "예체능: " + ArtAndPhysical;
+        LanguageText.text = "인문사회: " + sLanguage;
+        ArithmeticText.text = "이공: " + sArithmetic;
+        ArtAndPhysicalText.text = "예체능: " + sArtAndPhysical;
     }
 
     public static void Study()
@@ -44,11 +39,11 @@ public class PlayerStat : MonoBehaviour
 
     void StudyCal()
     {
-        if(sLanguage > 70)
+        if (sLanguage > 70)
         {
             Language = "상";
         }
-        else if(sLanguage > 30)
+        else if (sLanguage > 30)
         {
             Language = "중";
         }

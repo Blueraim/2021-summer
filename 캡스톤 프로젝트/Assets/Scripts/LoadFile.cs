@@ -6,14 +6,18 @@ public class LoadFile : MonoBehaviour
 {
     public TextAsset questionFile;
     public TextAsset answerFile;
+    public TextAsset sayNPCFile;
 
     private Dictionary<char, List<string>> questionList;
     private Dictionary<char, List<string>> answerList;
+
+    private List<string> sayNPC;
 
     void Awake()
     {
         questionList = new Dictionary<char, List<string>>();
         answerList = new Dictionary<char, List<string>>();
+        sayNPC = new List<string>();
 
         string questionText = questionFile.text.Substring(0, questionFile.text.Length);
         string answerText = answerFile.text.Substring(0, answerFile.text.Length);
@@ -23,6 +27,10 @@ public class LoadFile : MonoBehaviour
         Load(questionlines, questionList);
         Load(answerlines, answerList);
 
+        string sayText = sayNPCFile.text.Substring(0, sayNPCFile.text.Length);
+        string[] sayLines = sayText.Split('\n');
+
+        LoadsayNPC(sayLines);
 
         /*for (int i = 0; i < questionList['I'].Count; i++)
          {
@@ -61,6 +69,19 @@ public class LoadFile : MonoBehaviour
                 tmp.Add(lines[i]);
             }
         }
+    }
+
+    void LoadsayNPC(string[] lines)
+    {
+        for(int i=0; i<lines.Length; i++)
+        {
+            sayNPC.Add(lines[i]);
+        }
+    }
+
+    public List<string> GetSayList()
+    {
+        return sayNPC;
     }
 
     public List<string> GetQuestionList(char key)
